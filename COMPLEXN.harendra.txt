@@ -1,0 +1,42 @@
+write a program to find the sum of two  complex no using class function.
+
+
+#include<conio.h>
+#include<iostream.h>
+class complex
+ {
+      float a,b;
+	   public:
+		void init (float x,float y)
+		  {
+			 a=x;
+			  b=y;
+		  }
+		 void  disp()
+		 {
+			cout<<a<<"+i"<<b<<endl;
+		    }
+    void sum(complex M, complex N)
+    {
+      a=M.a+N.a;
+      b=M.b+N.b;
+    }
+ };
+ void main()
+ {
+    complex ob1,ob2,ob3;
+    clrscr();
+    float a,b;
+    cout<<"enter first value";
+    cin>>a>>b;
+    ob1.init(a,b);
+    cout<<"enter second complex(a,b) ";
+    cin>>a>>b;
+    ob2.init(a,b);
+    ob3.sum(ob1,ob2);
+    cout<<"complex no. are ";
+    ob1.disp();
+    ob2.disp();
+    cout<<"sum is : " ;
+    ob3.didsp();
+ }
