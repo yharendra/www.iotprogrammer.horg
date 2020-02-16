@@ -1,4 +1,4 @@
-write a program to find the sum of two  complex no using class function.
+//write a program to find the sum of two  complex no using class function.
 
 
 #include<conio.h>
