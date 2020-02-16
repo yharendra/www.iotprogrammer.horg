@@ -1,0 +1,43 @@
+
+#include<stdio.h>
+#include<conio.h>
+#include<dos.h>
+
+void main()
+{
+int i,a[100],temp,j,no;
+clrscr();
+printf("How many no. do u want to insert: ");
+scanf("%d",&no);
+printf("\nEnter any %d num in array \n",no);
+
+for(i=0;i<no;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("\n\n\nData before sorting : ");
+for(j=0;j<no;j++)
+{
+delay(200);
+printf("  %d",a[j]);
+}
+for(i=0;i<no;i++)
+{
+for(j=0;j<no-i-1;j++)
+{
+if(a[j]>a[j+1])
+{
+temp=a[j];
+a[j]=a[j+1];
+a[j+1]=temp;
+}
+}
+}
+printf("\n\n\nData after sorting : ");
+for(j=0;j<no;j++)
+{
+delay(200);
+printf("  %d",a[j]);
+}
+getch();
+}
