@@ -1,0 +1,107 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#define size 5
+
+void pop();
+void push();
+void display();
+
+ struct stack
+  {
+   int item;
+   int stack[size];
+  }s;
+
+  int top=-1;
+
+  void push()
+  {
+  if(top==size-1)
+  {
+  printf("\n stack is full");
+  }
+  else
+  {
+  top=top+1;
+  printf("\n\n enter element in stack = ");
+  scanf("%d",&s.item);
+  s.stack[top]=s.item;
+  }
+  }
+
+  void pop()
+  {
+  if(top==0)
+  {
+  printf("\nstack is empty = ");
+  }
+  else
+  {
+  s.item=s.stack[top];
+  top=top-1;
+  printf("deleted data is= %d",s.item);
+  }
+  }
+
+  void display()
+  {
+   int i;
+   if(top==0)
+   {
+   printf("\n stack is empty = ");
+   }
+   else
+   {
+    for(i=top;i>0;i--)
+    {
+    printf("\n%d",s.stack[i]);
+    }
+   }
+  }
+
+  void main()
+  {
+   char ch,c;
+
+   do
+   {
+   u:
+   clrscr();
+   printf("\n\n1: push");
+   printf("\n2: pop");
+   printf("\n3: display");
+   printf("\n4: exit");
+   printf("\nenter your choice = ");
+   scanf("%d",&ch);
+   switch(ch)
+   {
+    case 1:
+	 up:
+	 push();
+	 break;
+    case 2:
+	 pop();
+	 break;
+    case 3:
+	 display();
+	 break;
+    case 4:
+	 exit(0);
+	 break;
+    default:
+	 printf("\nwrong choice");
+   }
+   printf("\n\n Pushed an element (Y/N)");
+   c=getch();
+   if(c=='y'||c=='Y')
+   {
+   goto up;
+   }
+   else
+   {
+   goto u;
+   }
+   }
+   while(ch!=5);
+  }
