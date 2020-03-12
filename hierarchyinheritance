@@ -1,0 +1,93 @@
+#include<iostream>
+using namespace std;
+class g
+{
+    public:
+   char city[10],area[10];
+   int h_no,s_no;
+   long int phone_no;
+     void get(void );
+     void disp(void);
+};
+void g::get(void)
+{
+   cout<<"\n enter the name of city :";
+   cin>>city;
+   cout<<"\n enter the area where he/she lives :";
+   cin>>area;
+   cout<<"\n enter house no and street no simultaneously : ";
+   cin>>h_no>>s_no;
+   cout<<"\n enter the phone no should be 10 digit : ";
+   cin>>phone_no;
+}
+void g::disp(void)
+{
+   cout<<"\n name of the city is : "<<city;
+   cout <<"\n name of the area is : "<<area;
+   cout<<"\n name of house no and street no : "<<h_no<<endl<<s_no<<endl;
+}
+class student:public g
+{
+    public:
+   long int roll_no;
+   int marks;
+   char name[10];
+         void sget(void);
+         void sdisp(void);
+};
+void student::sget(void)
+{
+      cout<<"\n enter the roll no of student : ";
+      cin>>roll_no;
+      cout<<"\n enter the name of student : ";
+      cin>>name;
+      cout<<"\n enter the marks :";
+      cin>>marks;
+
+}
+void student::sdisp(void)
+{
+      cout<<"\n roll no is :"<<roll_no;
+      cout<<"\n name is :"<<name;
+      cout<<"\n marks are :"<<marks;
+
+}
+class employee : public g
+{
+    public:
+      int emp_id;
+      char f_name[10],l_name[10];
+      double salary;
+      char dept[10];
+      void eget(void);
+      void edisp(void);
+};
+void employee::eget(void)
+{
+     cout<<"\n enter the employee id :";
+     cin>>emp_id;
+     cout<<"\n enter the first name :";
+     cin>>f_name;
+     cout<<"\n enter the last name:";
+     cin>>l_name;
+     cout<<"\n enter the salary of employee:";
+     cin>>salary;
+     cout<<"\n enter the department of employee : ";
+     cin>>dept;
+}
+void employee::edisp(void)
+          {
+              cout<<"\n id is :"<<emp_id<<endl;
+              cout<<"\n first name and last name is :"<<f_name<<endl<<l_name<<endl;
+              cout<<"\n salary of employee is :"<<salary;
+              cout<<"\n department of employee is :"<<dept;
+          }
+          int main()
+          {
+              student obj;
+              employee obj1;
+              obj.sget();
+              obj.sdisp();
+              obj1.eget();
+              obj1.edisp();
+              }
