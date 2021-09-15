@@ -1,0 +1,38 @@
+/*Start
+Declare 
+initialize an array.
+Loop through the array
+select an element.
+If any element is less than the selected element then swap the values.
+Continue this process till sorted array in ascending order.*/
+
+// Program to sort array 
+#include<bits/stdc++.h>
+using namespace std;
+
+// Declaring compare function
+bool compare(int a,int b)
+{
+  return a>b;
+}
+int main()
+{
+  int n;
+  cout<<"Enter number of elements : ";
+  cin>>n;
+  cout<<"\nEnter array elements:\n";
+  int arr[n];
+  for(int i=0;i<n;i++)
+  {
+    cin>>arr[i];
+  }
+  
+  // inbuilt sort function
+  sort(arr,arr+n,compare);
+  cout<<"\nArray aftr sorting in decreasing order:\n";
+  for(int i=0;i<n;i++)
+  {
+    cout<<arr[i]<<" ";
+  }
+  return 0;
+}
